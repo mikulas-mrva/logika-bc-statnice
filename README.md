@@ -1,5 +1,4 @@
-# logika-bc-statnice
-Otazky ke statnicim. Logika FF UK.
+# (casem snad) Otazky ke statnicim
 
 * Logika
 * Teorie mnozin
