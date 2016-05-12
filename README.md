@@ -1,3 +1,5 @@
+##  Na některé základní pojmy a znalosti může dojít při kterékoliv otázce z kteréhokoliv předmětu, například: tautologie, splnitelná (výroková) formule, logicky platná formule, vyplývání, disjunktivní a konjunktivní normální forma, prenexní normální forma, věta o dedukci, axiomatická teorie, model, rekurzívně spočetné a rekurzívní množiny a Postova věta, pojem funkce, relace a vlastnosti relací, grupa, okruh, ordinální a kardinální čísla.
+
 # Okruhy
 
 ## Logika
