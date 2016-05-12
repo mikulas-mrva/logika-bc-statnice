@@ -41,3 +41,6 @@ Požadavky odpovídají skriptům z přednášek teorie množin (první a druhý
 * Kripkovská sémantika, dva typy sémantického důsledku a jejich rozlišení. Silná korektnost hilbertovských kalkulů (logiky K a alespoň jednoho jejího rozšíření)
 * Silná úplnost výrokových modálních logik (logika K a alespoň jedno její rozšíření) - kanonický model; příklad modální logiky, která není kompaktní, a tedy silně úplná
 * Úplnost pomocí konečného modelu - vlastnost konečných modelů (protipříkladů), rozhodnutelnost (logiky K a alespoň jednoho jejího rozšíření)
+
+
+viz [Informace na webu katedry](http://logika.ff.cuni.cz/bakalarska-zkouska)
