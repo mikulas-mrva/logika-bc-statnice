@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{longtable}
+\usepackage{paralist}
+\usepackage{lineno}
+\usepackage{verbatim}
+\usepackage[utf8x]{inputenc}
+\usepackage{csquotes}
+\pagestyle{plain}
+\headheight 14.5pt
+%\fancyhead[R]{\leftmark}
+%\fancyfoot{}
+%\fancyfoot[C]{\thepage}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{Claim}[theorem]{Claim}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{Cor}[theorem]{Corollary}
+\newtheorem{Fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{sublemma}[theorem]{Sublemma}
+\newtheorem{ex}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{obs}[theorem]{Observation}
+\newtheorem{que}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\newenvironment{proof}
+{\noindent \textit{Proof.}}
+{\hspace*{\fill} $\Box$}
+
+\newcommand{\toch}{\fbox{\small {\bf ??}}}
+\newcommand{\bt}[1]{{\underset{\widetilde{}}{#1}}}
+\newcommand{\trcl}[1]{\ensuremath{\mathrm{trcl}(\{#1\})}}
+\newcommand{\cf}[1]{\ensuremath{\mathrm{cf}(#1)}}
+\newcommand{\cl}[1]{\ensuremath{\mathrm{cl}}(#1)}
+\newcommand{\ord}[1]{\ensuremath{\mathrm{ORD}}(#1)}
+\newcommand{\dom}[1]{\ensuremath{\mathrm{dom}}(#1)}
+\newcommand{\rng}[1]{\ensuremath{\mathrm{rng}}(#1)}
+\newcommand{\power}[1]{\ensuremath{\mathscr{P}} (#1)}
+\newcommand{\set}[2]{\ensuremath{\{#1 \,|\, #2 \}}}
+\newcommand{\seq}[2]{\ensuremath{\langle #1 \,|\, #2 \rangle}}
+\newcommand{\singl}[1]{\ensuremath{\{#1\}}}
+\newcommand{\pair}[2]{\ensuremath{\{ #1, #2 \}}}
+\newcommand{\restr}[2]{\ensuremath{#1 \! \upharpoonright \! #2}}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\el}{\prec}
+\newcommand{\iso}{\cong}
+\newcommand{\sub}{\subseteq}
+\newcommand{\super}{\supseteq}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\embed}{\rightarrow}
+\newcommand{\mc}{\mathcal}
+\newcommand{\supr}[1]{\mathrm{sup}\,#1}
+\newcommand{\then}{\rightarrow}
+\newcommand{\conc}{^{\smallfrown}}
+\newcommand{\bb}{\mathbb}
+\newcommand{\supp}[1]{\mathrm{supp}(#1)}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\brm}{\begin{remark}\begin{rm}}
+\newcommand{\erm}{\end{rm}\end{remark}}
+\newcommand{\mx}{\mathrm}
+\newcommand{\bce}{\begin{compactenum}}
+\newcommand{\ece}{\end{compactenum}}
+\newcommand{\op}[2]{\la #1, #2 \ra}
+\newcommand{\treq}{\trianglelefteq}
+\newcommand{\et}{\mathrel{\&}}
+
+\newcommand\defeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+
