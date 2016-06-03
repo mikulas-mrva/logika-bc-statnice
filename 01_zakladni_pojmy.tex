@@ -1,39 +1,120 @@
 \input{00_hlavicky.tex}
 \begin{document}
-\begin{definition}{(tautologie)}\\
-$\ldots$
+
+Pozor na rozlišení formule / výrokové fomrule, atomy / výrokové atomy, etc...
+
+\begin{definition}{(Množina všech atomů)}\\
+Množnou všech výrokových atomů, značenou $\mathsf{At}$, nazýváme nekonečnou množinu všech proměnných
+\begin{equation}
+\mathsf{At} \defeq \{p_n : n \in \sf{N}\}
+\end{equation}
+\end{definition}
+
+\begin{definition}{(Výrokové spojky)}
+$\neg, \et, \lor, \then$ definovat netřeba.
+\end{definition}
+
+\begin{definition}{(Literál)}\\
+\bce[(i)]
+\item Atom je \emph{literál}.
+\item Negace atomu je \emph{literál}.
+\ece
+\end{definition}
+
+\begin{definition}{(Klauzule)}
+Formule $\varphi$ je klauzule, když je ve tvaru
+\begin{equation}
+\varphi = \psi_1 \lor \psi_2 \lor \ldots \lor \psi_n 
+\end{equation}
+pro některé $n \in \sf{N}$.
+\end{definition}
+
+\begin{definition}{(Množina všech fomrulí)}\\
+Rekurzivne podle definice spojek $\ldots$. Značime $\mathsf{Fle}$
+\end{definition}
+
+\begin{definition}{(Pravdivostní ohodnocení)}\\
+$mathsf{At}$ je množina všech atomů. Pravdivostní ohodnocení je libovolná funkce v:
+\begin{equation}
+v : \mathsf{At} \then \{0, 1\}
+\end{equation}
+Jeho rozšíření na $\bar{v}: \mathsf{Fle}$ 
 \end{definition}
 
 \begin{definition}{(splnitelná (výroková) formule)}\\
-$\ldots$
+Výroková formule $\varphi$ je splnitelná, jestliže existuje pravdivostní ohodnocení v takové, že $v(\varphi) = 1$
 \end{definition}
 
-\begin{definition}{(logicky platná formule)}\\
-$\ldots$
+\begin{definition}{(splnitelná množina (výrokových) formulí)}\\
+Množina výrokových formulí $T$ je splnitelná, jestliže existuje pravdivostní ohodnocení v takové, že $v(\psi) = 1\mbox{ pro každou }\psi \in T$
 \end{definition}
 
 \begin{definition}{(vyplývání)}\\
-$\ldots$
+Výroková formule $\varphi$ je (tautologickým) důsledkem množiny výrokových formulí T, jestliže $\varphi$ je splněna
+každým pravdivostním ohodnocením, které splňuje všechny formule z T. Píšeme $T \models \varphi$
+\begin{equation}
+T \models \varphi iff \forall v(\forall\psi \in T(v(\psi) = 1) \then v(\varphi) = 1)
+\end{equation}
+\end{definition}
+
+\begin{definition}{(Tautologie)}\\
+(Výroková) Formule $\varphi$ je (výroková) tautologie, jestliže $v(\varphi) = 1$ pro každé pravdivostní ohodnocení v.\
+Píšeme $\models \varphi$, nebo $\emptyset \models \varphi$, tautologie vyplývá z prázdné množiny (výrokových) formulí.
+\end{definition}
+
+\subsubsection{Predikáová logika}
+
+\begin{definition}{(Realizace)}\\
+Realizací jazyka rozumíme algebraickou strukturu složenou z:
+\bce[(i)]
+\item  neprázdné množiny $M$ zvané univerzum
+\item pro každý funkční symbol $f$ arity $n$ je dáno zobrazení $f: M^n \rightarrow M$
+\item pro každý predikátový symbol $R$ arity $n$ kromě rovnosti je dána relace $R \subseteq M^n$
+\item relace $=$ představuje rovnost objektů z $M$
+\ece
+\end{definition}
+
+\begin{definition}{(Ohodnocení proměnných)}\\
+Ohodnocením proměnných nazveme zobrazení z množiny e všech proměnných do univerza M dané realizace jazyka predikátové logiky.
+Ohodnocení proměnné $x$ prvkem $m$ v rámci všech ohodnocení proměnných $e$ značíme $e(x) = m$ nebo též $e(x/m)$.
+\end{definition}
+
+\begin{definition}{(Pravdivostní hodnota formule)}\\
+Indukcí definujeme, co je to pravdivostní hodnota formule $\varphi$v realizaci M při ohodnocení e:
+\bce[(i)]
+\item je-li $\varphi$atomická formule tvaru $R(t_1, t_2, \dots, t_n)$, kde $R$ je predikátový symbol arity $n$ a $t_1,\ldots, t_n$ jsou termy, pak $\varphi$je pravdivá právě tehdy, když $(e(t_1), e(t_2), \dots, e(t_n)) \in R$.
+\item je-li $\varphi$ atomická formule tvaru $t1 = t2$, kde $t1$ a $t2$ jsou termy, pak $\varphi$ je pravdivá, právě když $e(t1)$ je tentýž prvek jako $e(t2)$.
+\item je-li $\varphi$ tvaru $\neg \psi$, kde $\psi$,je formule jazyka, pak $\varphi$ je pravdivá, právě když $\psi$ není pravdivá formule, analogicky ostatní spojky.
+\item je-li $\varphi$ tvaru $(\forall x) \psi$, kde $\psi$ je formule jazyka, pak $\varphi$ je pravdivá právě tehdy, když pro každý prvek $m \in M$ je $\psi[e(x/m)]$ pravdivé.
+\item je-li $\varphi$ tvaru $(\exists x) \psi$, kde $\psi$ je formule jazyka, pak $\varphi$ je pravdivá právě když existuje $m \in M$ tak, že $Q[e(x/m)]$ je pravdivé.
+\ece
+\end{definition}
+
+\begin{definition}{(logicky platná formule)}\\
+Formule $\varphi$ jazyka $\mathscr{L}$ se nazývá logicky platná, jestliže je platná ve všech realizacích.
 \end{definition}
 
 \begin{definition}{(disjunktivní a konjunktivní normální forma)}\\
-$\ldots$
+\bce[(i)]
+\item Řekneme že formule je v \emph{disjunktivní normální formě}, jestliže je to disjunkce konjunkcí literálů.
+\item Řekneme že formule je v \emph{konjunktivní normální formě}, jestliže je to konjunkce disjunkcí literálů.
+\ece
 \end{definition}
 
 \begin{definition}{(prenexní normální forma)}\\
-$\ldots$
+Řekneme že formule $\varphi$ je v \emph{prenexní normální formě}, jestliže je v jejím zápisu všechny kvantifikátory předcházejí všechny logické spojky.
 \end{definition}
 
-\begin{definition}{(věta o dedukci)}\\
-$\ldots$
-\end{definition}
+\begin{theorem}{(Věta o dedukci)}\\
+Nechť $\Gamma$ je množina formulí a $\varphi$ a $\psi$ jsou formula takové, že $\Gamma, \psi \vdash \varphi$.\\ Pak $\Gamma \vdash \psi \then \varphi$.
+\end{theorem}
 
 \begin{definition}{(axiomatická teorie)}\\
-$\ldots$
+Axiomatická teorie je dvojice jazyka $L$ a $T$, množiny sentencí v $L$. Místo $\langle L, T \rangle$ píšeme obvykle $T$.\footnote{Občas jsou axiomy ve skutečnosti univerzální uzávěry formulí v $T$.}
 \end{definition}
 
-\begin{definition}{(model)}\\
-$\ldots$
+\begin{definition}{(Model)}\\
+Struktura $D$ pro jazyk $L$ je model teorie $\langle L,T \rangle$, jestliže v $D$ platí všechny prvky množiny $T$.
 \end{definition}
 
 \begin{definition}{(rekurzívně spočetné a rekurzívní množiny a Postova věta)}\\
